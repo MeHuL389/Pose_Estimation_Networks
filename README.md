@@ -1,4 +1,4 @@
-# Convolutional Pose Machines - Tensorflow
+# Pose Estimation Networks - Tensorflow
 
 <p align="center">
     <img src="https://github.com/timctho/ConvolutionalPoseMachines-Tensorflow/raw/master/cpm_hand.gif", width="480">
