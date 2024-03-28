@@ -122,7 +122,7 @@ def main():
                                             json_file[cam_id][img_id]['name'])
                     img = cv2.imread(img_path)
 
-                    # Read joints
+                   
                     hand_2d_joints = np.zeros(shape=(21, 2))
                     bbox = json_file[cam_id][img_id]['bbox']
                     bbox[0] = max(bbox[0] - bbox_offset, 0)
@@ -163,9 +163,9 @@ def main():
                     loss, = sess.run([model.total_loss], feed_dict={model.input_images: img,
                                                                     model.gt_hmap_placeholder: gt_heatmap_np})
 
-                    # loss_cnt += loss
+                    
                     img_cnt += 1
-                    # print(img_path, float(loss_cnt)/ img_cnt)
+                    
 
                     if loss > 150.0:
                         hnm_json_list[cam_id].append(json_file[cam_id][img_id])
